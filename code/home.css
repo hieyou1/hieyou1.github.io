@@ -20,8 +20,15 @@
 .max699min520 {
   display: none;
 }
+.notmax699min520 {
+  display: inherit;
+}
 @media screen and (max-width: 699px) and (min-width: 520px) {
   .max699min520 {
     display: inherit;
+  }
+  .notmax699min530
+  {
+    display: none;
   }
 }

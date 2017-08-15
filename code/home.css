@@ -17,3 +17,12 @@
 .fixed {
   position: fixed;
 }
+.max699min520 {
+  display: none;
+}
+@media screen and (max-width: 699px) and (min-width: 520px) {
+  .max699min520 {
+    display: inherit;
+  }
+}
+.

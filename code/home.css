@@ -1,7 +1,7 @@
 .menu {
   position: relative;
   padding-left: 1.25em;
-  display: inherit;
+  display: none;
 }
 .menu:before {
   content: "";
@@ -38,6 +38,6 @@
 
 @media screen and (max-width: 699px) and (min-width: 520px) {
   .menu {
-    display: none;
+    display: inherit;
   }
 }

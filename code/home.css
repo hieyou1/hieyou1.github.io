@@ -1,6 +1,7 @@
 .menu {
   position: relative;
   padding-left: 1.25em;
+  display: inherit;
 }
 .menu:before {
   content: "";
@@ -23,6 +24,7 @@
 .notmax699min520 {
   display: inherit;
 }
+
 @media screen and (max-width: 699px) and (min-width: 520px) {
   .max699min520 {
     display: inherit;
@@ -30,6 +32,12 @@
 }
 @media screen and (max-width: 699px) and (min-width: 520px) {
   .notmax699min520{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 699px) and (min-width: 520px) {
+  .menu {
     display: none;
   }
 }

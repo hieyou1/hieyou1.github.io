@@ -14,3 +14,6 @@
     0 0.25em 0 0 black,
     0 0.5em 0 0 black;
 }
+.fixed {
+  position: fixed;
+}

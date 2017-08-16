@@ -1,0 +1,314 @@
+<html class="gu-video-embed-html"><head><style class="vjs-styles-defaults">
+    .video-js {
+      width: 300px;
+      height: 150px;
+    }
+
+    .vjs-fluid {
+      padding-top: 56.25%
+    }
+  </style><style class="vjs-styles-dimensions">
+    .player-dimensions {
+      width: 864px;
+      height: 360px;
+    }
+
+    .player-dimensions.vjs-fluid {
+      padding-top: 41.66666666666667%;
+    }
+  </style>
+<link href="http://entervideo.net/vjs/video-js.min.css" rel="stylesheet">
+  <style>
+
+
+body {
+          background-color: #000000;
+          margin: 0 0 0 0;
+      }
+
+      .vjs-fullscreen {
+          padding-top: 0px
+      }
+
+      .vjs-tech {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+      }
+      .vjs-poster {
+          width: 100%;
+          height: auto;
+      }
+
+
+      /*New design*/
+      .video-js .vjs-big-play-button{
+          border:none;
+      }
+
+      .video-js:hover .vjs-big-play-button  {
+          background-color: #fb0;
+      }
+
+
+
+      .video-js .vjs-tech, .video-js{
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          position: absolute;
+      }
+
+      .video-js .vjs-control-bar{
+          background-color: rgba(33, 31, 29, 0.8);
+      }
+
+      /*.video-js .vjs-button:hover{
+          background-color:#fb0;
+      }*/
+
+      .vjs-loading-spinner {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -25px 0 0 -25px;
+      opacity: 0.85;
+      text-align: left;
+      border: 6px solid rgba(43, 51, 63, 0.7);
+      box-sizing: border-box;
+      background-clip: padding-box;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px; }
+
+      .vjs-seeking .vjs-loading-spinner,
+      .vjs-waiting .vjs-loading-spinner {
+      display: block; }
+
+      .vjs-loading-spinner:before{
+      content: "";
+      position: absolute;
+      margin: -6px;
+      box-sizing: inherit;
+      width: inherit;
+      height: inherit;
+      border-radius: inherit;
+      opacity: 1;
+      border: inherit;
+      border-color: transparent;
+      border-top-color: white; }
+
+      .vjs-seeking .vjs-loading-spinner:before,
+      .vjs-waiting .vjs-loading-spinner:before{
+      -webkit-animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, vjs-spinner-fade 1.1s linear infinite;
+      animation: vjs-spinner-spin 1.1s cubic-bezier(0.6, 0.2, 0, 0.8) infinite, vjs-spinner-fade 1.1s linear infinite; }
+
+      .vjs-seeking .vjs-loading-spinner:before,
+      .vjs-waiting .vjs-loading-spinner:before {
+      border-top-color: white; }
+
+      @keyframes vjs-spinner-spin {
+      100% {
+          transform: rotate(360deg); } }
+
+      @-webkit-keyframes vjs-spinner-spin {
+      100% {
+          -webkit-transform: rotate(360deg); } }
+
+      @keyframes vjs-spinner-fade {
+      0% {
+          border-top-color: #fb0; }
+      20% {
+          border-top-color: #fb0; }
+      35% {
+          border-top-color: white; }
+      60% {
+          border-top-color: #fb0; }
+      100% {
+          border-top-color: #fb0; } }
+
+      @-webkit-keyframes vjs-spinner-fade {
+      0% {
+          border-top-color: #fb0; }
+      20% {
+          border-top-color: #fb0; }
+      35% {
+          border-top-color: white; }
+      60% {
+          border-top-color: #fb0; }
+      100% {
+          border-top-color: #fb0; } }
+
+
+      .vjs-loading-spinner:after {
+          content: "Loading video.. Please wait a moment!";
+          padding-top: 50px;
+          color: #FFF;
+          position: absolute;
+          top: 15px;
+          width: 600px;
+          text-align: center;
+          left: -280px;
+          font-style: italic;
+      }
+      .video-js .vjs-progress-control .vjs-load-progress, .video-js .vjs-progress-control .vjs-play-progress{
+          background-color: #fb0;
+      }
+
+      .video-js .vjs-volume-menu-button .vjs-volume-level{
+          height: 100%;
+          background-color: #fb0;
+      }
+
+      .vjs-captions-button .vjs-menu .vjs-menu-content li:hover, .vjs-chapters-button .vjs-menu .vjs-menu-content li:hover, .vjs-descriptions-button .vjs-menu .vjs-menu-content li:hover, .vjs-subtitles-button .vjs-menu .vjs-menu-content li:hover{
+          background-color: #fb0;
+      }
+
+      .vjs-menu-item.vjs-selected{
+          background-color: #fb0;
+      }
+
+
+      /*Rounded btns*/
+      .video-js .vjs-control.vjs-play-control{
+          border-radius: 50%;
+          background-color: #fb0;
+          margin: 5px;
+          width: 40px;
+          height: 40px;
+      }
+
+      .video-js .vjs-fullscreen-control:hover{
+          background-color: #fb0;
+      }
+
+      /*TIME*/
+
+
+
+      .video-js .vjs-play-progress {
+      background-color: #fff; }
+      .video-js .vjs-play-progress:before {
+          position: absolute;
+          top: -0.333333333333333em;
+          right: -0.5em;
+          font-size: 0.9em; }
+
+      .video-js .vjs-time-tooltip,
+      .video-js .vjs-mouse-display:after,
+      .video-js .vjs-play-progress:after {
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+      top: -3.4em;
+      right: -1.9em;
+      font-size: 14px!important;
+      color: #000;
+      content: attr(data-current-time);
+      padding: 6px 8px 8px 8px;
+      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.8);
+      -webkit-border-radius: 0.3em;
+      -moz-border-radius: 0.3em;
+      border-radius: 0.3em; }
+
+      .video-js .vjs-progress-control .vjs-mouse-display {
+      display: none;
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      background-color:transparent;
+      z-index: 1; }
+
+      .vjs-no-flex .vjs-progress-control .vjs-mouse-display {
+      z-index: 0; }
+
+      .video-js .vjs-progress-control:hover .vjs-mouse-display {
+      display: block; }
+
+      .video-js .vjs-progress-control:hover .vjs-mouse-display::after, .vjs-mouse-display, .vjs-progress-control .vjs-mouse-display {
+          /*font-size: 0.95em !important;*/
+          font-size: 14px !important;
+      }
+
+      .video-js.vjs-user-inactive .vjs-progress-control .vjs-mouse-display,
+      .video-js.vjs-user-inactive .vjs-progress-control .vjs-mouse-display:after {
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: visibility 1s, opacity 1s;
+      -moz-transition: visibility 1s, opacity 1s;
+      -o-transition: visibility 1s, opacity 1s;
+      transition: visibility 1s, opacity 1s; }
+
+      .video-js.vjs-user-inactive.vjs-no-flex .vjs-progress-control .vjs-mouse-display,
+      .video-js.vjs-user-inactive.vjs-no-flex .vjs-progress-control .vjs-mouse-display:after {
+      display: none; }
+
+      .vjs-mouse-display .vjs-time-tooltip,
+      .video-js .vjs-progress-control .vjs-mouse-display:after {
+      color: #fff;
+      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.8); }
+
+
+      .video-js .vjs-progress-control .vjs-mouse-display, .video-js .vjs-progress-control .vjs-play-progress:after {
+          display: block !important
+      }
+      .video-js .vjs-time-control {
+          display: block;
+          padding: 0 2px;
+      }
+
+      /*IE FIX*/
+      .player-dimensions, .video-js .vjs-tech, .video-js{
+          width: 100% !important;
+          height: 100% !important;
+      }
+
+      /*End New Design*/
+.vjs-captions-button .vjs-menu {
+  overflow-y: auto;
+  max-height: 560px;
+  left: -20px;
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+
+
+
+
+<div class="">
+  <div id="flaAspectRatio" style="padding-top: 56.5254%;">
+      <div data-setup="{}" preload="auto" poster="/thumbs/nerve.2016.1080p.bluray.x264-drones___580188f1ece7b.mp4.jpg" class="video-js vjs-default-skin vjs-paused vjs-controls-enabled vjs-workinghover player-dimensions vjs-user-inactive" id="player" role="region" aria-label="video player"><video id="player_html5_api" class="vjs-tech" poster="/thumbs/nerve.2016.1080p.bluray.x264-drones___580188f1ece7b.mp4.jpg" preload="auto" data-setup="{}">
+<source src="http://185.176.192.22/vids/nerve.2016.1080p.bluray.x264-drones___580188f1ece7b.mp4" type="video/mp4">
+
+
+
+
+      </video><div></div><div class="vjs-poster" tabindex="-1" aria-disabled="false" style="background-image: url(&quot;/thumbs/nerve.2016.1080p.bluray.x264-drones___580188f1ece7b.mp4.jpg&quot;);"></div><div class="vjs-text-track-display" aria-live="off" aria-atomic="true"><div style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; margin: 1.5%;"></div></div><div class="vjs-loading-spinner" dir="ltr"></div><button class="vjs-big-play-button" type="button" aria-live="polite" title="Play Video" aria-disabled="false"><span class="vjs-control-text">Play Video</span></button><div class="vjs-control-bar" dir="ltr" role="group"><button class="vjs-play-control vjs-control vjs-button " type="button" aria-live="polite" title="Play" aria-disabled="false"><span class="vjs-control-text">Play</span></button><div class="vjs-volume-menu-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button  vjs-volume-menu-button-vertical vjs-vol-3" tabindex="0" role="button" aria-live="polite" title="Mute" aria-disabled="false"><div class="vjs-menu"><div class="vjs-menu-content"><div tabindex="0" class="vjs-volume-bar vjs-slider-bar vjs-slider vjs-slider-vertical" role="slider" aria-valuenow="100.00" aria-valuemin="0" aria-valuemax="100" aria-label="volume level" aria-valuetext="100.00%"><div class="vjs-volume-level"><span class="vjs-control-text"></span></div></div></div></div><span class="vjs-control-text">Mute</span></div><div class="vjs-current-time vjs-time-control vjs-control"><div class="vjs-current-time-display" aria-live="off"><span class="vjs-control-text">Current Time </span>0:00</div></div><div class="vjs-time-control vjs-time-divider"><div><span>/</span></div></div><div class="vjs-duration vjs-time-control vjs-control"><div class="vjs-duration-display" aria-live="off"><span class="vjs-control-text">Duration Time</span> 1:36:18</div></div><div class="vjs-progress-control vjs-control"><div tabindex="0" class="vjs-progress-holder vjs-slider vjs-slider-horizontal" role="slider" aria-valuenow="NaN" aria-valuemin="0" aria-valuemax="100" aria-label="progress bar" aria-valuetext="0:00"><div class="vjs-load-progress" style="width: 0%;"><span class="vjs-control-text"><span>Loaded</span>: 0%</span><div style="left: 0%; width: 0%;"></div></div><div class="vjs-mouse-display" data-current-time="0:00" style="left: 0px;"></div><div class="vjs-play-progress vjs-slider-bar" data-current-time="0:00"><span class="vjs-control-text"><span>Progress</span>: 0%</span></div></div></div><div class="vjs-live-control vjs-control vjs-hidden"><div class="vjs-live-display" aria-live="off"><span class="vjs-control-text">Stream Type</span>LIVE</div></div><div class="vjs-remaining-time vjs-time-control vjs-control"><div class="vjs-remaining-time-display" aria-live="off"><span class="vjs-control-text">Remaining Time</span> -1:36:18</div></div><div class="vjs-custom-control-spacer vjs-spacer ">&nbsp;</div><div class="vjs-playback-rate vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden" tabindex="0" role="menuitem" aria-live="polite" title="Playback Rate" aria-disabled="false" aria-expanded="false" aria-haspopup="true"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"></ul></div><span class="vjs-control-text">Playback Rate</span><div class="vjs-playback-rate-value">1</div></div><div class="vjs-chapters-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden" tabindex="0" role="menuitem" aria-live="polite" title="Chapters" aria-disabled="false" aria-expanded="false" aria-haspopup="true" aria-label="Chapters Menu"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-title" tabindex="-1">Chapters</li></ul></div><span class="vjs-control-text">Chapters</span></div><div class="vjs-descriptions-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden" tabindex="0" role="menuitem" aria-live="polite" title="Descriptions" aria-disabled="false" aria-expanded="false" aria-haspopup="true" aria-label="Descriptions Menu"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-item vjs-selected" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="true" title=", selected">descriptions off<span class="vjs-control-text">, selected</span></li></ul></div><span class="vjs-control-text">Descriptions</span></div><div class="vjs-subtitles-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden" tabindex="0" role="menuitem" aria-live="polite" title="Subtitles" aria-disabled="false" aria-expanded="false" aria-haspopup="true" aria-label="Subtitles Menu"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-item vjs-selected" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="true" title=", selected">subtitles off<span class="vjs-control-text">, selected</span></li></ul></div><span class="vjs-control-text">Subtitles</span></div><div class="vjs-captions-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button" tabindex="0" role="menuitem" aria-live="polite" title="Captions" aria-disabled="false" aria-expanded="false" aria-haspopup="true" aria-label="Captions Menu"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"><li class="vjs-menu-item vjs-texttrack-settings" tabindex="-1" role="menuitem" aria-live="polite" aria-disabled="false" title=", opens captions settings dialog">captions settings<span class="vjs-control-text">, opens captions settings dialog</span></li><li class="vjs-menu-item vjs-selected" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="true" title=", selected">captions off<span class="vjs-control-text">, selected</span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">English<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">French<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Spanish<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Arabic<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Italian<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Persian<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Malay<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Dutch<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Turkish<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Danish<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Greek<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Finnish<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Bengali/Bangla<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Norwegian<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Swedish<span class="vjs-control-text"> </span></li><li class="vjs-menu-item" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false" title=" ">Thai<span class="vjs-control-text"> </span></li></ul></div><span class="vjs-control-text">Captions</span></div><div class="vjs-audio-button vjs-menu-button vjs-menu-button-popup vjs-control vjs-button vjs-hidden" tabindex="0" role="menuitem" aria-live="polite" title="Audio Track" aria-disabled="false" aria-expanded="false" aria-haspopup="true" aria-label="Audio Menu"><div class="vjs-menu" role="presentation"><ul class="vjs-menu-content" role="menu"></ul></div><span class="vjs-control-text">Audio Track</span></div><button class="vjs-fullscreen-control vjs-control vjs-button " type="button" aria-live="polite" title="Fullscreen" aria-disabled="false"><span class="vjs-control-text">Fullscreen</span></button></div><div class="vjs-error-display vjs-modal-dialog vjs-hidden " tabindex="-1" aria-describedby="player_component_355_description" aria-hidden="true" aria-label="Modal Window" role="dialog"><p class="vjs-modal-dialog-description vjs-offscreen" id="player_component_355_description">This is a modal window.</p><div class="vjs-modal-dialog-content" role="document"></div></div><div class="vjs-caption-settings vjs-modal-overlay vjs-hidden" tabindex="-1" role="dialog" aria-labelledby="TTsettingsDialogLabel-player_component_360" aria-describedby="TTsettingsDialogDescription-player_component_360"><div role="document"><div class="vjs-control-text" id="TTsettingsDialogLabel-player_component_360" aria-level="1" role="heading">Caption Settings Dialog</div><div class="vjs-control-text" id="TTsettingsDialogDescription-player_component_360">Beginning of dialog window. Escape will cancel and close the window.</div><div class="vjs-tracksettings"><div class="vjs-tracksettings-colors"><fieldset class="vjs-fg-color vjs-tracksetting"><legend>Text</legend><label class="vjs-label" for="captions-foreground-color-player_component_360">Color</label><select id="captions-foreground-color-player_component_360"><option value="#FFF">White</option><option value="#000">Black</option><option value="#F00">Red</option><option value="#0F0">Green</option><option value="#00F">Blue</option><option value="#FF0">Yellow</option><option value="#F0F">Magenta</option><option value="#0FF">Cyan</option></select><span class="vjs-text-opacity vjs-opacity"><label class="vjs-label" for="captions-foreground-opacity-player_component_360">Transparency</label><select id="captions-foreground-opacity-player_component_360"><option value="1">Opaque</option><option value="0.5">Semi-Transparent</option></select></span></fieldset><fieldset class="vjs-bg-color vjs-tracksetting"><legend>Background</legend><label class="vjs-label" for="captions-background-color-player_component_360">Color</label><select id="captions-background-color-player_component_360"><option value="#000">Black</option><option value="#FFF">White</option><option value="#F00">Red</option><option value="#0F0">Green</option><option value="#00F">Blue</option><option value="#FF0">Yellow</option><option value="#F0F">Magenta</option><option value="#0FF">Cyan</option></select><span class="vjs-bg-opacity vjs-opacity"><label class="vjs-label" for="captions-background-opacity-player_component_360">Transparency</label><select id="captions-background-opacity-player_component_360"><option value="1">Opaque</option><option value="0.5">Semi-Transparent</option><option value="0">Transparent</option></select></span></fieldset><fieldset class="vjs-window-color vjs-tracksetting"><legend>Window</legend><label class="vjs-label" for="captions-window-color-player_component_360">Color</label><select id="captions-window-color-player_component_360"><option value="#000">Black</option><option value="#FFF">White</option><option value="#F00">Red</option><option value="#0F0">Green</option><option value="#00F">Blue</option><option value="#FF0">Yellow</option><option value="#F0F">Magenta</option><option value="#0FF">Cyan</option></select><span class="vjs-window-opacity vjs-opacity"><label class="vjs-label" for="captions-window-opacity-player_component_360">Transparency</label><select id="captions-window-opacity-player_component_360"><option value="0">Transparent</option><option value="0.5">Semi-Transparent</option><option value="1">Opaque</option></select></span></fieldset></div><div class="vjs-tracksettings-font"><div class="vjs-font-percent vjs-tracksetting"><label class="vjs-label" for="captions-font-size-player_component_360">Font Size</label><select id="captions-font-size-player_component_360"><option value="0.50">50%</option><option value="0.75">75%</option><option value="1.00">100%</option><option value="1.25">125%</option><option value="1.50">150%</option><option value="1.75">175%</option><option value="2.00">200%</option><option value="3.00">300%</option><option value="4.00">400%</option></select></div><div class="vjs-edge-style vjs-tracksetting"><label class="vjs-label" for="player_component_360">Text Edge Style</label><select id="player_component_360"><option value="none">None</option><option value="raised">Raised</option><option value="depressed">Depressed</option><option value="uniform">Uniform</option><option value="dropshadow">Dropshadow</option></select></div><div class="vjs-font-family vjs-tracksetting"><label class="vjs-label" for="captions-font-family-player_component_360">Font Family</label><select id="captions-font-family-player_component_360"><option value="proportionalSansSerif">Proportional Sans-Serif</option><option value="monospaceSansSerif">Monospace Sans-Serif</option><option value="proportionalSerif">Proportional Serif</option><option value="monospaceSerif">Monospace Serif</option><option value="casual">Casual</option><option value="script">Script</option><option value="small-caps">Small Caps</option></select></div></div><div class="vjs-tracksettings-controls"><button class="vjs-default-button">Defaults</button><button class="vjs-done-button">Done</button></div></div></div></div></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

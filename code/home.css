@@ -41,3 +41,15 @@
     display: inherit;
   }
 }
+
+@media screen and (max-height: 1px) and (max-width: 1px) {
+  body {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 1px) and (max-width: 1px) {
+  .onepxlog {
+    display: inherit;
+  }
+}

@@ -2,9 +2,58 @@
 <html>
 <head>
   <title>App Downloader</title>
+  <meta name="viewport" content="width=device-width"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway" />
+  <style>
+  div {
+    font-family: 'Raleway', serif;
+  }
+  body {
+    background-repeat: no-repeat;
+    background-color: green;
+  }
+  .app {
+    font-family: 'Roboto', serif;
+  }
+  .computer {
+    display: none;
+  }
+  .ok {
+    display: inherit;
+  }
+  @media screen and (min-width: 930px) {
+    body {
+      background-image: url("https://cdn2.iconfinder.com/data/icons/ios7-inspired-mac-icon-set/1024/_app_store_5122x.png");
+      background-color: red;
+    }
+    .computer {
+      display: inherit;
+    }
+    .ok {
+      display: none;
+    }
+    .app {
+      display: none;
+    }
+  }
+  </style>
 </head>
 <body>
-  <a href="itms-services://?action=download-manifest&url=https://managercompany.github.io/mah/code/apps/plists/freegalseegals/manifest.plist">Install Bagels</a>
-  <a href="itms-services://?action=download-manifest&url=https://managercompany.github.io/mah/code/apps/plists/youtubeplusplus/manifest.plist">Install YouTube++</a>
+  <a class="app" href="itms-services://?action=download-manifest&url=https://managercompany.github.io/mah/code/apps/plists/freegalseegals/manifest.plist">
+    <img src="https://managercompany.github.io/mah/code/apps/images/freegalseegals.png" />
+  </a>
+  <a class="app" href="itms-services://?action=download-manifest&url=https://managercompany.github.io/mah/code/apps/plists/youtubeplusplus/manifest.plist">
+    <img src="https://managercompany.github.io/mah/code/apps/images/youtubeplusplus.png" />
+  </a>
+  <div class="computer">
+
+    Oh no!
+    We see that you are on a computer. Please make sure to load up a iPhone or iPad when trying to download apps. If on a larger size iPad, put it into portrait mode. Thanks!
+  </div>
+  <div class="ok">
+
+    You are good to go! Please report any errors you may have during installation and we will try our best to fix them.
+  </div>
 </body>
 </html>

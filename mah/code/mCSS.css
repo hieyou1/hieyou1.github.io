@@ -2,6 +2,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Coming+Soon');
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
 /* </imports> */
 /* <custom> */
 /* <text-tags> */
@@ -13,6 +16,15 @@ open-sans {
 }
 coming-soon {
   font-family: 'Coming Soon', cursive;
+}
+calligraffitti {
+  font-family: 'Calligraffitti', cursive;
+}
+architects-daughter {
+  font-family: 'Architects Daughter', cursive;
+}
+slabo {
+  font-family: 'Slabo 27px', serif;
 }
 /* </text-tags> */
 /* </custom> */

@@ -55,5 +55,36 @@
 
     You are good to go! Please report any errors you may have during installation and we will try our best to fix them.
   </div>
+  <SCRIPT>
+function passWord() {
+var testV = 1;
+var pass1 = prompt('Enter your password','');
+while (testV < 3) {
+if (!pass1)
+history.go(-1);
+if (pass1.toLowerCase() == "lololol") {
+alert('Correct! Now redirecting you to the normal page...');
+var myElement = document.querySelector("#computer");
+myElement.style.display = "none";
+var myElementNumberTwo = document.querySelector('#app');
+myElementNumberTwo.style.display = "inherit";
+var MyElementNumberThree = document.querySelector('#ok');
+MyElementNumberThree.style.display = "inherit";
+break;
+}
+testV+=1;
+var pass1 =
+prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+}
+if (pass1.toLowerCase()!="password" & testV ==3)
+history.go(-1);
+return " ";
+}
+</SCRIPT>
+<CENTER>
+<FORM>
+<input type="button" value="Or, click here with the special password to continue..." onClick="passWord()" class="computer">
+</FORM>
+</CENTER>
 </body>
 </html>

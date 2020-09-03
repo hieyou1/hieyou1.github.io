@@ -35,7 +35,7 @@
     "firebase-tools": "^3.0.8",
     "fs-extra": "^3.0.1",
     "google-closure-compiler": "^20160713.2.0",
-    "google-closure-library": "^20170409.0.0",
+    "google-closure-library": "^20200830.0.0",
     "google-closure-templates": "^20150410.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.12",
